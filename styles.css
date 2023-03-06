@@ -1,0 +1,23 @@
+img {
+    width: 50px;
+    height 50px;
+}
+.col-lg-4 {
+    min-height: 93vh;
+    max-height: 93vh;
+    border: 2px blue solid;
+}
+.col-lg-8 {
+    .min-height: 100vh;
+    border: 2px green solid;
+}
+.inbox {
+    max-height: 92vh;
+    border: 2px red solid;
+    overflow: auto;
+}
+#compose {
+    min-width: 850px;
+    min-height: 200px;
+    max-width: auto;
+}
