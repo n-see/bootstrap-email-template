@@ -1,23 +1,36 @@
-img {
+  body, nav{
+    background-image: linear-gradient(160deg, rgb(199, 132, 45), rgb(194, 191, 14), rgb(199, 132, 45));
+  }
+  img {
     width: 50px;
-    height 50px;
+    height: 50px;
 }
-.col-lg-4 {
-    min-height: 93vh;
-    max-height: 93vh;
-    border: 2px blue solid;
+.buttons {
+    text-align: center;
+
 }
-.col-lg-8 {
-    .min-height: 100vh;
-    border: 2px green solid;
+.more-buttons {
+    text-align: left;
+    font-weight: 1000;
+}
+#inbox-text:hover, #sent-text:hover, #junk-text:hover, #archive-text:hover, #trash-text:hover {
+    color: rgb(0, 47, 255);
+}
+.open-card {
+    border: 2px rgb(0, 47, 255 ) solid;
 }
 .inbox {
-    max-height: 92vh;
-    border: 2px red solid;
+    border-radius: 10px;
+    max-height: 80vh;
     overflow: auto;
+} 
+h2{
+text-align: left;
 }
-#compose {
-    min-width: 850px;
-    min-height: 200px;
-    max-width: auto;
+.send-button {
+    justify-content: flex-end;
 }
+.card-body {
+    text-align: left;
+}
+

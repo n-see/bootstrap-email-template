@@ -7,55 +7,79 @@
   <!-- Bootstrap style sheet -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/191b0dd01e.js" crossorigin="anonymous"></script>
   <!-- CSS style Sheet -->
   <link href="styles.css" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
-  <div class="container text-center">
+  <div class="container-fluid text-center">
     <div class="row">
       <!--Used from getbootstrap.com -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <!-- nav bar -->
+
+      <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <!--img src found from W3Schools -->
-          <img src="email.png" alt="email logo">
-          <a class="navbar-brand" href="#">Welcome, John Doe</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <button type="button" class="btn btn-primary compose-button">Compose</button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inbox</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sent</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Junk</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Trash</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+          
+          <a class="navbar-brand"><i class="fa-solid fa-envelope fa-2xl"></i>  Welcome, John Doe</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
         </div>
       </nav>
-      <div class="col-md-12 col-lg-4 inbox-column">
+      
+      <!-- Column 1 -->
+      <div class="col-2 d-none d-lg-block">
+        <div class="buttons">
+          <br />
+          <button type="button" class="btn btn-primary compose-button"><i class="fa-solid fa-pencil"></i>  Compose</button>
+        </div>
+        <div class="more-buttons">
+          <ul>
+            <br>
+            <ul id="inbox-text"><i class="fa-solid fa-inbox"></i>  Inbox</ul>
+            <br>
+            <ul id="sent-text"><i class="fa-solid fa-paper-plane"></i> Sent</ul>
+            <br>
+            <ul id="junk-text"><i class="fa-solid fa-question"></i>  Junk</ul>
+            <br>
+            <ul id="archive-text"><i class="fa-solid fa-box-archive"></i>  Archive</ul>
+            <br>
+            <ul id="trash-text"><i class="fa-solid fa-trash-can"></i>  Trash</ul>
+          </ul>
+        </div> 
+      </div>
+<!-- Column 2 -->
+      <div class="col-md-6 col-lg-4">
+        <h2>Inbox</h2>
         <div class="inbox">
           <!--Card Class from getbootstrap.com -->
+          
           <div class="card" style="width: 100%;">
             <div class="card-body">
-              <h5 class="card-title">Here's your mail that never fails</h5>
-              <h6 class="card-subtitle mb-2 text-muted">From: blues_clues@mail.com</h6>
-              <p class="card-text">When it comes I want to wail... MMMMAAAAIIIILLL. Come vist Blue from Blue's Clues
-                today at the Oakland Colesium.</p>
+              <h5 class="card-title">Welcome to Disneyland</h5>
+              <h6 class="card-subtitle mb-2 text-muted">From: walt_disney@disneyland.com</h6>
+              <p class="card-text">To all who come to this happy place: Welcome. Disneyland is your land. Here age relives fond memories of the past, and here youth may ...</p>
+            </div>
+          </div>
+          <br />
+          <!--Currently Open Email -->
+          <div class="card open-card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Help Me Obi-Wan Kenobi</h5>
+              <h6 class="card-subtitle mb-2 text-muted">From: notleiaorgana@galaticmail.com</h6>
+              <p class="card-text">General Kenobi. Years ago you served my father in the Clone Wars. Now he begs you to help him in his struggle against the Empire. I regret that ...</p>
+            </div>
+          </div>
+          <br />
+          <!--New email -->
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">Car's Extended Warranty</h5>
+              <h6 class="card-subtitle mb-2 text-muted">From: totallynotspam@hacker.org</h6>
+              <p class="card-text">Hello, <br /> I am contacting you regarding you car's extended warranty. For an exta $300 you can ...</p>
             </div>
           </div>
           <br />
@@ -68,33 +92,13 @@
                 today at the Oakland Colesium.</p>
             </div>
           </div>
-          <br />
+          <br>
           <!--New email -->
           <div class="card" style="width: 100%;">
             <div class="card-body">
-              <h5 class="card-title">Here's your mail that never fails</h5>
-              <h6 class="card-subtitle mb-2 text-muted">From: blues_clues@mail.com</h6>
-              <p class="card-text">When it comes I want to wail... MMMMAAAAIIIILLL. Come vist Blue from Blue's Clues
-                today at the Oakland Colesium.</p>
-            </div>
-          </div>
-          <br />
-          <!--New email -->
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h5 class="card-title">Here's your mail that never fails</h5>
-              <h6 class="card-subtitle mb-2 text-muted">From: blues_clues@mail.com</h6>
-              <p class="card-text">When it comes I want to wail... MMMMAAAAIIIILLL. Come vist Blue from Blue's Clues
-                today at the Oakland Colesium.</p>
-            </div>
-          </div>
-          <!--New email -->
-          <div class="card" style="width: 100%;">
-            <div class="card-body">
-              <h5 class="card-title">Here's your mail that never fails</h5>
-              <h6 class="card-subtitle mb-2 text-muted">From: blues_clues@mail.com</h6>
-              <p class="card-text">When it comes I want to wail... MMMMAAAAIIIILLL. Come vist Blue from Blue's Clues
-                today at the Oakland Colesium.</p>
+              <h5 class="card-title">Campfire Song Song</h5>
+              <h6 class="card-subtitle mb-2 text-muted">From: spongebob@bikinibottom.net</h6>
+              <p class="card-text">Let's gather around the campfire and sing our campfire song, our C-A-M-P-F-I-R-E S-O-N-G ...</p>
             </div>
           </div>
           <br />
@@ -102,17 +106,31 @@
         </div>
       </div>
       <br />
-      <div class="col-md-0 col-lg-8 write-column">
+      <!-- Column 3 -->
+      <div class="col-6 col-md-6 d-none d-sm-block write-column">
+        <br>
         <div class="card" style="width: 100%;">
           <div class="card-body">
-            <h5 class="card-title">Here's your mail that never fails</h5>
-            <h6 class="card-subtitle mb-2 text-muted">From: blues_clues@mail.com</h6>
-            <p class="card-text">When it comes I want to wail... MMMMAAAAIIIILLL. Come vist Blue from Blue's Clues
-              today at the Oakland Colesium.</p>
+            <h3 class="card-title">Help Me Obi-Wan Kenobi</h3>
+            <h6 class="card-subtitle mb-2 text-muted">From: notleiaorgana@galaticmail.com</h6>
+            <p class="card-text">General Kenobi. Years ago you served my father in the Clone Wars. Now he begs you to help him in his struggle against the Empire. I regret that I am unable to present my father's request to you in person, but my ship has fallen under attack, and I'm afraid my mission to bring you to Alderaan has failed. I have placed information vital to the survival of the Rebellion into the memory systems of this R2 unit. My father will know how to retrieve it. You must see this droid safely delivered to him on Alderaan. This is our most desperate hour. Help me, Obi-Wan Kenobi. You're my only hope.</p>
           </div>
         </div>
         <br />
-        <textarea id="compose" name="compose"></textarea>
+        <div class="form-floating d-flex flex-wrap justify-content-end">
+          <textarea class="form-control" placeholder="Type your message" id="floatingTextarea2" style="height: 170px"></textarea>
+          <label for="floatingTextarea2">Type your message</label>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-primary" for="btnradio1"><i class="fa-solid fa-floppy-disk"></i></i></label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio2"><i class="fa-solid fa-paperclip"></i></label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btnradio3"><i class="fa-solid fa-paper-plane"></i></label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
